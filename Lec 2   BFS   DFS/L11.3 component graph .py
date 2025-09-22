@@ -1,9 +1,4 @@
 
-
-
-
-
-
 # Cycle Detection in unirected Graph (bfs)
 
 from collections import deque
@@ -22,16 +17,16 @@ def detect(Start, adj, vis):
                 return True  
     return False  
 
-# def isCycle(V, adj): 
+# def isCycle(V, adj):      # single graph 
 #     vis = [0] * V 
 #     startNode = 1 
 #     return detect(startNode, adj, vis)
 
-def isCycle(V, adj): 
+def isCycle(V, adj):  # component graph 
     vis = [0] * V  
-    for i in range(V):     
-        if not vis[i]:  
-            if detect(i, adj, vis):
+    for startNode in range(V):     
+        if not vis[startNode]:  
+            if detect(startNode, adj, vis):
                 return True  
     return False  
 

@@ -44,6 +44,7 @@ def num_islands(grid):
     rows, cols = len(grid), len(grid[0])
     vis = [[0] * cols for _ in range(rows)]
     count = 0
+    
     for i in range(rows):
         for j in range(cols):
             if not vis[i][j] and grid[i][j] == '1':

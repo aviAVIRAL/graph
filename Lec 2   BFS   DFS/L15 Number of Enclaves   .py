@@ -13,7 +13,7 @@ def number_of_enclaves(grid):
                     q.append((i, j))
                     vis[i][j] = 1
     
-    delrow = [-1, 0, 1, 0]
+    delrow = [-1, 0, 1, 0]  # old representation -------------------
     delcol = [0, 1, 0, -1]
     
     while q:

@@ -14,9 +14,9 @@ def dfs(node, parent, vis, adj):
 
 def isCycle(V, adj):
     vis = [0] * V  
-    for i in range(V):  
-        if not vis[i]:  
-            if dfs(i, -1, vis, adj):
+    for StartingNode in range(V):  
+        if not vis[StartingNode]:  
+            if dfs(StartingNode, -1, vis, adj):
                 return True  
     return False  
 

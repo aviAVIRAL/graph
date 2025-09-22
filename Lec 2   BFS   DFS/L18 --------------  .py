@@ -10,7 +10,7 @@ def dfs(node, col,        color, adj):
             if dfs(neighbor, 1 - col, color, adj) == False : 
                 return False   
 
-        elif color[neighbor] == col:
+        elif color[neighbor] == color[node]:
             return False
     return True
 
